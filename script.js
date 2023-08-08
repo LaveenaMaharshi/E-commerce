@@ -22,15 +22,14 @@ async function fetchingData () {
         mainBody.innerHTML = '';
 
         filteredData.forEach((element) => {
-            mainBody.innerHTML += ` <div class="card" style="height: 30%; width: 30%;">
-            <img src=${element.thumbnail} class="card-img-top" alt="...">
-            <div class="card-body" style="height: 30%;">
-              <h5 class="card-title">${element.title}</h5>
-              <p class="card-text"></p>
-              <p class = "card-text">${element.brand}</p>
-              <a href="#" class="btn btn-primary">Click Here</a>
-            </div>
-        </div>`
+            mainBody.innerHTML += `<div class="card col-4 d-flex justify-content-between align-content-center bg-dark">
+        <img src=${element.images[0]} class="card-img-top shadow image-fluid" alt=${element.title}>
+        <div class="card-body justify-content-around" >
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">${element.brand}</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>`
         });
     }
 
@@ -53,7 +52,7 @@ async function fetchingData () {
         renderCard(filteredData);
 
     }
-    searchInput.addEventListener('input', searcBasedOnInput);
+    // searchInput.addEventListener('input', searcBasedOnInput);
 
     renderCard(data.products);
 
