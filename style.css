@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+*{
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    /* height: 100%;
+    width: 100%; */
+    font-size: 65%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #fff;
+}
+
+.container{
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    
+}
+
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    /* height: 16rem; */
+}
+
+.container .product-container .product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #eee;
+    box-shadow: 0 .5rem 1rem ;
+    outline: 1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .product-container .product:hover{
+    outline: 1rem solid #777;
+    outline-offset: 0;
+}
+
+.container .product-container .product img{
+    height: 12rem;
+    min-width: auto;
+}
+
+.container .product-container .product:hover img{
+    transform: scale(1.3);
+    /* transform: rotate(360deg); */
+}
+
+.container .product-container .product h3{
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: #131;
+}
+
+.container .product-container .product:hover h3{
+    color: darkviolet;
+}
+
+.container .product-container .product h5{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: #131;
+}
+
+.container .product-container .product .price{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #131;   
+}
+
+.container .product-container .product:hover .price{
+    color: rgb(27, 179, 78);
+}
+
+
+
+.products-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 1rem;
+    width: 50rem;
+    /* height: 60rem; */
+}
+
+.products-preview .preview.active{
+    display: inline-block;
+}
+
+.products-preview .preview img{
+    height: 30rem;
+}
+
+.products-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 3rem;
+}
+
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+    color: #444;
+    padding: .5rem 0;
+    font-size: 2.5rem;
+}
+
+.products-preview .preview h5{
+    color: #444;
+    padding: .4rem 0;
+    font-size: 1.5rem;
+}
+
+.products-preview .preview .stars{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i{
+    color: yellow;
+}
+
+.products-preview .preview .stars span{
+    color: green;
+}
+
+.products-preview .preview p{
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+.products-preview .preview .price{
+    padding: 1rem 0;
+    font-size: 2.0rem;
+    color: darkgreen;
+
+}
+
+.products-preview .preview .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.products-preview .preview .buttons a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: #444;
+    border: .1rem solid;
+}
+
+.products-preview .preview .buttons a.cart{
+    background: #444;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+    background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+    background: #444;
+    color: #fff;
+}
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+    .products-preview .preview img{
+        height: 30rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
